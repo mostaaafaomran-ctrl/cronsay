@@ -1,0 +1,27 @@
+:root{--bg:#050805;--g:#39ff7a;--a:#ffb000;--d:#1a2a1a;--m:#7fae8a}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#000;color:var(--g);font-family:"JetBrains Mono","Fira Code",ui-monospace,Consolas,monospace;display:flex;flex-direction:column;align-items:center;padding:24px 12px;background-image:repeating-linear-gradient(0deg,#0000 0 2px,#0a140a 3px)}
+.term{width:100%;max-width:760px;border:1px solid var(--d);background:var(--bg);box-shadow:0 0 40px #39ff7a22;border-radius:8px;overflow:hidden}
+.bar{display:flex;gap:6px;align-items:center;padding:10px 12px;background:#0d150d;border-bottom:1px solid var(--d);color:var(--m);font-size:.8rem}
+.bar i{width:11px;height:11px;border-radius:50%;background:#ff5f56}.bar i:nth-child(2){background:#ffbd2e}.bar i:nth-child(3){background:#27c93f}
+.bar span{margin:0 auto}
+.bar button{background:none;border:1px solid var(--g);color:var(--g);font:inherit;padding:2px 8px;cursor:pointer;border-radius:4px}
+.body{padding:18px}
+label{color:var(--m);font-size:.85rem}
+#expr{width:100%;margin-top:6px;background:#000;border:1px solid var(--g);color:var(--a);font:inherit;font-size:1.5rem;padding:12px;border-radius:4px;letter-spacing:.12em;caret-color:var(--g);direction:ltr;text-align:left}
+#expr:focus{outline:none;box-shadow:0 0 0 2px #39ff7a44}
+.fields{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:10px 0;direction:ltr}
+.fields div{border:1px dashed var(--d);padding:6px;text-align:center;font-size:.7rem;color:var(--m)}
+.fields b{display:block;color:var(--a);font-size:1rem}
+.out{font-size:1.2rem;line-height:1.6;margin:14px 0;min-height:3em}
+.pr{color:var(--a)}
+#err{color:#ff5f56;min-height:1.2em}
+h3{color:var(--a);font-size:.85rem;margin:16px 0 6px;text-transform:uppercase;letter-spacing:.15em}
+ol{margin:0;padding-left:1.6em;direction:ltr;text-align:left}li{margin:2px 0}
+#ex{display:flex;flex-wrap:wrap;gap:6px}
+#ex button{background:#000;border:1px solid var(--d);color:var(--g);font:inherit;padding:5px 9px;cursor:pointer;border-radius:4px;direction:ltr}
+#ex button:hover{border-color:var(--g)}
+.tz{display:block;margin-top:16px}
+footer{margin-top:16px;font-size:.8rem;color:var(--m)}footer a{color:var(--g)}
+[dir=rtl] .out,[dir=rtl] h3,[dir=rtl] label{font-family:"Cairo",system-ui,sans-serif}
+@media(max-width:520px){.fields{grid-template-columns:repeat(5,1fr)}#expr{font-size:1.1rem}}

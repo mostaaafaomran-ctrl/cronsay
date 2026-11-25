@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>cronsay | Cron expression explainer (EN/AR)</title>
+<meta name="description" content="cronsay turns cron expressions into plain English or Arabic and shows the next run times. Free, offline, no signup.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="term">
+  <div class="bar"><i></i><i></i><i></i><span>cronsay ~ explain</span><button id="lang">AR</button></div>
+  <div class="body">
+    <label for="expr" id="lbl">$ cron expression</label>
+    <input id="expr" value="*/15 9-17 * * 1-5" spellcheck="false" autocomplete="off">
+    <div class="fields" id="fields"></div>
+    <div class="out"><span class="pr">&gt;</span> <span id="say"></span></div>
+    <div id="err"></div>
+    <h3 id="nextH">next runs</h3>
+    <ol id="next"></ol>
+    <h3 id="exH">try</h3>
+    <div id="ex"></div>
+    <label class="tz"><input type="checkbox" id="utc"> <span id="utcL">show times in UTC</span></label>
+  </div>
+</div>
+<footer>MIT · <a href="https://github.com/mostaaafaomran-ctrl/cronsay">GitHub</a></footer>
+<script src="cron.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
